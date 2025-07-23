@@ -121,15 +121,12 @@ const App = () => {
         <div id="popup">
           <div className="modal">
             <h2>📋 Important Notes</h2>
-            <ul>
-              <li>🧫 Antibiotics ONLY treat bacterial infections.</li>
-              <li>⚕️ Do not take any Rx medications without a physician’s advice.</li>
-              <li>❌ Misuse can lead to serious side effects and antibiotic resistance.</li>
-              <li>✅ Always complete the prescribed antibiotic course.</li>
-              <li>🧪 Some symptoms may require only supportive care with OTC medications.</li>
-              <li>🧭 Seek professional medical help if symptoms persist beyond 48 hours.</li>
-              <li>🚨 If you experience allergic reactions, stop medication and consult a doctor.</li>
-            </ul>
+            <ul className="popup-list">
+            <li>Antibiotics ONLY treat bacterial infections, not viral infections.</li>
+            <li>Do not take any Rx medications or antibiotics without a physician’s advice.</li>
+            <li>Antibiotics can cause serious side effects, c. difficile diarrhea, and an increased risk of antibiotic-resistant infections if not used correctly.</li>
+            <li>If starting a course of antibiotics, make sure to finish the complete course, even if you start to feel better after the first 2 days.</li>
+          </ul>
             <button onClick={() => setPopupVisible(false)}>Got it</button>
           </div>
         </div>
