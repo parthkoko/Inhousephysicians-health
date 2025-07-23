@@ -198,76 +198,93 @@ nav a:hover::after {
   transform: translateY(0);
 }
 
-/* Popup Modal */
+/* === Popup Styles === */
 #popup {
-  display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-#popup .modal {
-  background: white;
-  color: black;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 500px;
+.modal {
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px 40px;
   width: 90%;
-  text-align: left;
-  position: relative;
-  animation: fadeInUp 0.5s ease;
+  max-width: 520px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  font-family: "Poppins", sans-serif;
+  animation: slideUp 0.4s ease-in-out;
 }
 
-#popup .modal h2 {
-  margin-bottom: 15px;
-  color: #EF5B46;
+.modal h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2c3e50;
 }
 
-#popup ul {
+.modal ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin-bottom: 25px;
 }
 
-#popup ul li {
-  padding-left: 20px;
-  margin-bottom: 10px;
-  position: relative;
-  font-style: italic;
+.modal ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: start;
+  gap: 10px;
 }
 
-#popup ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #EF5B46;
-  font-weight: bold;
+.modal ul li::before {
+  content: "✔️";
+  font-size: 18px;
+  color: #2ecc71;
+  margin-top: 2px;
 }
 
-#popup button {
-  margin-top: 20px;
-  background: #EF5B46;
+.modal button {
+  background: #2c3e50;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 30px;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.modal button:hover {
+  background: #1a252f;
 }
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 
 /* Responsive Styles */
 @media(max-width: 768px) {

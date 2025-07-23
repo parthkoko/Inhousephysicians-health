@@ -122,10 +122,13 @@ const App = () => {
           <div className="modal">
             <h2>📋 Important Notes</h2>
             <ul>
-              <li>Antibiotics ONLY treat bacterial infections.</li>
-              <li>Do not take any Rx medications without a physician’s advice.</li>
-              <li>Misuse can lead to serious side effects and antibiotic resistance.</li>
-              <li>Always complete the prescribed antibiotic course.</li>
+              <li>🧫 Antibiotics ONLY treat bacterial infections.</li>
+              <li>⚕️ Do not take any Rx medications without a physician’s advice.</li>
+              <li>❌ Misuse can lead to serious side effects and antibiotic resistance.</li>
+              <li>✅ Always complete the prescribed antibiotic course.</li>
+              <li>🧪 Some symptoms may require only supportive care with OTC medications.</li>
+              <li>🧭 Seek professional medical help if symptoms persist beyond 48 hours.</li>
+              <li>🚨 If you experience allergic reactions, stop medication and consult a doctor.</li>
             </ul>
             <button onClick={() => setPopupVisible(false)}>Got it</button>
           </div>
