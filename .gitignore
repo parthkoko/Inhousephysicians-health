@@ -1,0 +1,23 @@
+# 🚫 Ignore node_modules (npm packages)
+node_modules/
+
+# 🚫 Ignore build output
+dist/
+
+# 🔐 Ignore environment variables
+.env
+.env.*.local
+
+# 🛠️ Ignore local IDE settings
+.vscode/
+.idea/
+
+# 🍏 macOS system file
+.DS_Store
+
+# 📃 Logs
+*.log
+npm-debug.log*
+
+# 🔧 Optional: Windows thumbnail cache
+Thumbs.db
