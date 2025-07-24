@@ -112,21 +112,34 @@ nav a:hover::after {
 
 .image-container {
   flex: 1;
-  max-width: 400px;
+  max-width: 700px;
+  position: relative;
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  background: #EF5B46;
+  border-radius: 20px;
+  box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .image-container img {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease;
+  /* transition: transform 0.4s ease; */
 }
 
-.image-container img:hover {
+/* .image-container img:hover {
   transform: scale(1.05);
-}
+} */
 
-.medications {
+/* .medications {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
@@ -164,38 +177,65 @@ nav a:hover::after {
   left: 0;
   color: #EF5B46;
   font-weight: bold;
+} */
+
+.throat-section {
+  padding: 80px 20px;
+ 
+  display: flex;
+  justify-content: center;
 }
 
-.throat-info {
-  text-align: center;
-  padding: 60px 20px;
+.throat-container {
+  display: grid;
+    grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: space-between;
+   background-color: #0e1a34;
+  max-width: 1300px;
+  padding: 40px 50px;
+  border-radius: 20px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.throat-info h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+.throat-text {
+  flex: 1;
+  min-width: 300px;
 }
 
-.throat-info img {
+.throat-text h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #EF5B46;
+}
+
+.throat-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.throat-image img {
+  width: 100%;
   max-width: 400px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
 }
 
-.throat-info img:hover {
-  transform: scale(1.05);
-}
+@media (max-width: 768px) {
+  .throat-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .throat-text h2 {
+    font-size: 2rem;
+  }
 }
 
 /* === Popup Styles === */
@@ -301,3 +341,431 @@ nav a:hover::after {
   }
 }
 
+/* ThroatSymptomChecker */
+
+.throat-symptom-checker{
+  padding: 50px 0 100px 0;
+}
+
+.main-title {
+      text-align: center;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      animation: titleFloat 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes titleFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #a1a1aa;
+      margin-bottom: 60px;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 40px;
+      perspective: 1000px;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      animation: cardFloat 0.8s ease forwards;
+      transform: translateY(50px) rotateX(15deg);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+
+    .card:hover {
+      transform: translateY(-20px) rotateX(0deg) scale(1.02);
+      box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes cardFloat {
+      to {
+        transform: translateY(0) rotateX(0deg);
+        opacity: 1;
+      }
+    }
+
+    .card-header {
+      position: relative;
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .card:nth-child(2) .card-header {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+    }
+
+    .card:nth-child(3) .card-header {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+    }
+
+    .card-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: rotate(45deg);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      display: block;
+      animation: iconPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-content {
+      padding: 35px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #e4e4e7;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .card-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    }
+
+    .symptom-section {
+      margin-bottom: 25px;
+    }
+
+    .symptom-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .symptom-title::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    .card:nth-child(2) .symptom-title::before {
+      background: linear-gradient(135deg, #ec4899, #ef4444);
+    }
+
+    .card:nth-child(3) .symptom-title::before {
+      background: linear-gradient(135deg, #22c55e, #3b82f6);
+    }
+
+    .symptom-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptom-list li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 25px;
+      transition: color 0.3s ease;
+    }
+
+    .symptom-list li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-size: 1.2rem;
+    }
+
+    .card:nth-child(2) .symptom-list li::before {
+      color: #ec4899;
+    }
+
+    .card:nth-child(3) .symptom-list li::before {
+      color: #22c55e;
+    }
+
+    .criteria-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .criteria-table th {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(239, 68, 68, 0.3));
+      color: #fff;
+      padding: 15px;
+      font-weight: 600;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .criteria-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background-color 0.3s ease;
+    }
+
+    .criteria-table tr:hover td {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .interpretation-section {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      border-left: 4px solid #EF5B46;
+    }
+
+    .risk-item {
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .risk-item:hover {
+      transform: translateX(5px);
+    }
+
+    .medication-note {
+      margin-top: 20px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1));
+      border-radius: 12px;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .final-tips {
+      padding: 0;
+    }
+
+    .tip-item {
+      padding: 15px 20px;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border-left: 4px solid #22c55e;
+      transition: all 0.3s ease;
+    }
+
+    .tip-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(8px);
+    }
+
+    .emphasis {
+      color: #fbbf24;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .card-header {
+        padding: 25px 20px;
+      }
+      
+      .card-content {
+        padding: 25px 20px;
+      }
+      
+      .main-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    .floating-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(102, 126, 234, 0.4);
+      border-radius: 50%;
+      animation: float 6s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10px) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+
+
+
+
+/* medications-main */
+
+.medications-main{
+  padding: 100px 0px;
+}
+
+     .medications-main .card {
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      width: 90%;
+      max-width: 1400px;
+      padding: 30px;
+      gap: 30px;
+      margin: 0 auto;
+      /* animation: fadeIn 1s ease-in-out; */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 1;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(0);
+      }
+    }
+
+    .medications-main .column {
+      flex: 1 1 45%;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .medications-main .column:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .medications-main .title {
+      background: linear-gradient(to right, #EF5B46, #EF5B46);
+      padding: 12px 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .medications-main ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .medications-main li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: color 0.2s ease;
+    }
+
+    .medications-main li:hover {
+      color: #aee1ff;
+    }
+
+    @media (max-width: 768px) {
+      .medications-main .card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .medications-main .column {
+        width: 100%;
+      }
+    }

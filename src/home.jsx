@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
+import ThroatSymptomChecker from "./ThroatSymptomChecker";
+import Medications from "./Medications";
+import logo from "../public/logo.webp";
 // import "./App.css";
 
 const App = () => {
@@ -57,7 +60,7 @@ const App = () => {
       <canvas id="bg"></canvas>
       <header>
         <div className="logo">
-          <img src="https://i.ibb.co/nwN6cB2/logo-ihp.png" alt="IHP Logo" />
+          <img src={logo} alt="IHP Logo" />
         </div>
         <nav>
           <a href="#">Our Services</a>
@@ -72,8 +75,7 @@ const App = () => {
         <div className="text-container">
           <h1>RoamRX Medical Symptom Guide</h1>
           <p>
-            Your RoamRx Essential Kit contains a variety of OTC and Rx medications
-            for travelers. This guide helps you use them effectively.
+            Your RoamRx Essential Kit contains a variety of OTC and Rx medications. These medications have been chosen to treat the most common medical conditions travelers experience. Below is a list of medications included in the RoamRx Essential Kit. The guide on the following pages instructs you on how and when to use these medications. 
           </p>
         </div>
         <div className="image-container">
@@ -84,7 +86,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="medications">
+      {/* <section className="medications">
         <div className="medication-card fade-in" ref={(el) => fadeRefs.current[0] = el}>
           <h3>OTC Medications</h3>
           <ul>
@@ -107,15 +109,27 @@ const App = () => {
             <li>Ondansetron</li>
           </ul>
         </div>
-      </section>
 
-      <section className="throat-info fade-in" ref={(el) => fadeRefs.current[2] = el}>
-        <h2>Is it a Viral or Strep Throat?</h2>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDikDOqDAm4yjSc7xb09q_k52eo-da_qrFBQ&s"
-          alt="Sore Throat Info"
-        />
-      </section>
+      </section> */}
+      <div className="medications-main">
+        <Medications />
+      </div>
+
+         <section className="throat-section">
+      <div className="throat-container">
+        <div className="throat-text">
+          <h2>
+            How to Know Whether Your Sore Throat Is a Viral Infection or Strep Throat?
+          </h2>
+        </div>
+        <div className="throat-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDikDOqDAm4yjSc7xb09q_k52eo-da_qrFBQ&s"
+            alt="Sore Throat Info"
+          />
+        </div>
+      </div>
+    </section>
 
       {popupVisible && (
         <div id="popup">
@@ -131,6 +145,11 @@ const App = () => {
           </div>
         </div>
       )}
+
+
+      <div className="">
+        <ThroatSymptomChecker />
+      </div>
     </div>
   );
 };
