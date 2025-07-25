@@ -58,7 +58,7 @@ const ThroatSymptomChecker = () => {
 
       <div className="container">
         {/* Step 1 */}
-        <div className="card">
+        <div className="card card1">
           <div className="card-header">
             <span className="card-icon">🔍</span>
             <h2 className="card-title">Step 1: Symptom Analysis</h2>
@@ -89,7 +89,7 @@ const ThroatSymptomChecker = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="card">
+        <div className="card card3">
           <div className="card-header">
             <span className="card-icon">📊</span>
             <h2 className="card-title">Step 2: Centor Risk Assessment</h2>
@@ -133,7 +133,7 @@ const ThroatSymptomChecker = () => {
         </div>
 
         {/* Step 3 */}
-        <div className="card">
+        <div className="card card2">
           <div className="card-header">
             <span className="card-icon">💡</span>
             <h2 className="card-title">Step 3: Important Guidelines</h2>

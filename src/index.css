@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: #0e1a34;
   color: #fff;
   overflow-x: hidden;
 }
@@ -188,16 +188,17 @@ nav a:hover::after {
 
 .throat-container {
   display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
   align-items: center;
-  justify-content: space-between;
-   background-color: #0e1a34;
-  max-width: 1300px;
-  padding: 40px 50px;
+  justify-content: center;
+   /* background-color: #0e1a34; */
+  max-width: 1400px;
+  padding: 40px 70px;
   border-radius: 20px;
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .throat-text {
@@ -206,22 +207,27 @@ nav a:hover::after {
 }
 
 .throat-text h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #EF5B46;
+  color:#0e1a34 ;
+  background: #EF5B46;
+  padding: 70px 50px;
+  border-radius: 20px;
+  margin-right: -70px;
 }
 
 .throat-image {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 600px; */
+  
   display: flex;
   justify-content: center;
 }
 
 .throat-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   object-fit: cover;
@@ -375,10 +381,14 @@ nav a:hover::after {
     .container {
       max-width: 1400px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
       gap: 40px;
       perspective: 1000px;
+      display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+
     }
 
     .card {
@@ -397,6 +407,20 @@ nav a:hover::after {
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
     }
+    .card1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card3 {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
 
     .card:nth-child(2) { animation-delay: 0.2s; }
     .card:nth-child(3) { animation-delay: 0.4s; }
@@ -744,14 +768,19 @@ nav a:hover::after {
       letter-spacing: 1px;
     }
 
-    .medications-main ul {
-      list-style: none;
-      padding-left: 0;
-    }
+   .medications-main ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.medications-main li::marker {
+  color: #EF5B46 !important;
+}
+
 
     .medications-main li {
       padding: 8px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
       transition: color 0.2s ease;
     }
 
@@ -769,3 +798,101 @@ nav a:hover::after {
         width: 100%;
       }
     }
+
+
+
+    .throat-two.throat-text h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #EF5B46;
+    background: #ffffff;
+    padding: 70px 50px;
+    border-radius: 20px;
+    margin-right: -70px;
+}
+
+/* parth css */
+.secmain {
+    /* background-color: #0C2045; */
+    padding: 100px 0;
+    position: relative;
+}
+.box-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.box-section-inn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.cardone ul {
+    list-style: circle;
+    padding-left: 30px;
+}
+.cardone h2 {
+    color: #fff;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.cardone li {
+  color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.cardone:hover{
+background: #fff;
+box-shadow: 0 20px 20px 0 #0C2045, 0 20px 20px 0 #0C2045;
+border-radius: 20px;
+transition: 0.4s ease-in-out;
+
+}
+.cardone:hover h2{
+color: #ef5b46;
+transition: 0.4s ease-in-out;
+}
+.cardone:hover ul li{
+color: #0C2045;
+transition: 0.4s ease-in-out;
+}
+.cardoneinner {
+    padding: 20px;
+}
+@media (max-width: 1299px) {
+    .box-section {
+    max-width: 1200px;
+}
+}
+@media (max-width: 992px) {
+    .box-section-inn {
+        grid-template-columns: repeat(2, 1fr);
+    }
+     .box-section {
+    max-width: 90%;
+}
+}
+
+/* Mobile (767px and down) */
+@media (max-width: 767px) {
+    .box-section-inn {
+        grid-template-columns: 1fr;
+    }
+
+    .cardone h2 {
+        font-size: 24px;
+    }
+
+    .cardone li {
+        font-size: 16px;
+    }
+
+    .secmain {
+        padding: 60px 0;
+    }
+    .cardoneinner {
+    padding: 15px;
+}
+}

@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import ThroatSymptomChecker from "./ThroatSymptomChecker";
 import Medications from "./Medications";
 import logo from "../public/logo.webp";
+import ThroatSection from "./ThroatSection";
+import ThroatSectionTwo from "./ThroatSectiontwo";
 // import "./App.css";
 
 const App = () => {
@@ -115,21 +117,9 @@ const App = () => {
         <Medications />
       </div>
 
-         <section className="throat-section">
-      <div className="throat-container">
-        <div className="throat-text">
-          <h2>
-            How to Know Whether Your Sore Throat Is a Viral Infection or Strep Throat?
-          </h2>
-        </div>
-        <div className="throat-image">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDikDOqDAm4yjSc7xb09q_k52eo-da_qrFBQ&s"
-            alt="Sore Throat Info"
-          />
-        </div>
+      <div className="">
+        <ThroatSection/>
       </div>
-    </section>
 
       {popupVisible && (
         <div id="popup">
@@ -150,6 +140,100 @@ const App = () => {
       <div className="">
         <ThroatSymptomChecker />
       </div>
+        <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+<section className="secmain">
+      <div className="box-section">
+        <div className="box-section-inn">
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Viral Cough Features </h2>
+            <ul>
+              <li>Gradual onset</li>
+              <li>Often begins with a sore throat or a runny nose </li>
+              <li>Low-grade or no fever </li>
+              <li>Symptoms improve in 7–10 days </li>
+              <li>Often accompanied by:</li>
+              <li>Sneezing</li>
+              <li>Nasal congestion</li>
+              <li>Body aches</li>
+              <li>Fatigue </li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Bacterial Cough Features</h2>
+            <ul>
+              <li>Productive cough with thick, dark yellow/brown/green mucus</li>
+              <li>Shortness of breath </li>
+              <li>Chest pain when coughing or breathing </li>
+              <li>Symptoms worsen after initial improvement (“double sickening”)</li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Other Causes of a Cough </h2>
+            <ul>
+              <li>Asthma (improves with an Albuterol inhaler) </li>
+              <li>Reactive Airway after viral infection (improves with an Albuterol inhaler)</li>
+              <li>Acid Reflux (GERD – improves with Omeprazole, Brand Name Nexium) </li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Treatment </h2>
+            <ul>
+              <li>Viral Infection Upper Respiratory Infection?</li>
+              <li>Consider using:</li>
+              <li>Guaifenesin (generic for Mucinex®) 400 mg by mouth every 4 hours as needed, not to exceed 2400 mg per day - this loosens up secretions </li>
+              <li>Ibuprofen 600 mg every 6 hours AND/OR Acetaminophen 1000 mg every 6-8 hours as needed for pain or fever (do not exceed 3000 mg per day)</li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Influenza or COVID-19?</h2>
+            <ul>
+              <li>Usually more severe than a cold with: </li>
+              <li>Severe body or muscle aches</li>
+              <li>nasal congestion, headache, cough, fever, fatigue </li>
+              <li>exposure to someone with the flu </li>
+              <li>Loss of sensation of taste or smell </li>
+              <li>We recommend taking the COVID-19 test. If the antigen COVID test is negative, then test again 2 days later.</li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Bronchitis or Pneumonia?</h2>
+            <ul>
+              <li>Consider using: Azithromycin (Brand Name Zithromax) 500 mg by mouth the first day, then 250 mg per day for the next 4 days OR Amoxicillin-Clavulanic 875 mg-125 mg (Brand Name Augmentin) by mouth twice daily for 7 days.</li>
+              <li>We recommend not taking antibiotics for bronchitis unless symptoms have been present for more than 7 - 10 days without improving. </li>
+            </ul>
+            </div>
+          </div>
+          <div className="cardone">
+            <div className="cardoneinner">
+              <h2>Red Flags </h2>
+            <ul>
+              <li>Seek immediate medical attention if: </li>
+              <li>Fever  101°F for more than 3 days </li>
+              <li>Cough with bloody mucus </li>
+              <li>Difficulty breathing or wheezing </li>
+              <li>Chest pain</li>
+              <li>Mental confusion or fatigue (especially in older adults)</li>
+              <li>Oxygen saturation level  92% (using a pulse oximeter)</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     </div>
   );
 };
