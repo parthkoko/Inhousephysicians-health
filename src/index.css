@@ -820,20 +820,20 @@ nav a:hover::after {
 }
 .box-section {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .box-section-inn {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 40px;
 }
 .cardone ul {
     list-style: circle;
     padding-left: 30px;
 }
 .cardone h2 {
-    color: #fff;
+    color: #EF5B46;
     font-size: 24px;
     padding-bottom: 20px;
 }
@@ -842,6 +842,12 @@ nav a:hover::after {
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: 500;
+}
+.cardone{
+border: 1px solid #0C2045;
+box-shadow: 0 20px 20px 0 #0C2045, 0 0 4px 0 #0C2045;
+border-radius: 20px;
+
 }
 .cardone:hover{
 background: #fff;
@@ -895,4 +901,815 @@ transition: 0.4s ease-in-out;
     .cardoneinner {
     padding: 15px;
 }
+}
+
+
+   .HayFeverColdComparison {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* background-color: #0a1e3f; */
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+ .HayFeverColdComparison h2 ,.HayFeverColdComparison h3 {
+      color: #ffffff;
+    }
+
+    .HayFeverColdComparison {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .HayFeverColdComparison .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .HayFeverColdComparison ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .HayFeverColdComparison ul li {
+      margin-bottom: 6px;
+    }
+
+    .HayFeverColdComparison table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .HayFeverColdComparison table, .HayFeverColdComparison th,.HayFeverColdComparison td {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .HayFeverColdComparison th,.HayFeverColdComparison td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    .HayFeverColdComparison th {
+      background-color: rgba(255, 255, 255, 0.1);
+      font-weight: bold;
+    }
+
+    .HayFeverColdComparison .treatment-list {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .HayFeverColdComparison table,.HayFeverColdComparison thead,.HayFeverColdComparison tbody,.HayFeverColdComparison th,.HayFeverColdComparison td,.HayFeverColdComparison tr {
+        display: block;
+      }
+
+      .HayFeverColdComparison thead {
+        display: none;
+      }
+
+      .HayFeverColdComparison tr {
+        margin-bottom: 15px;
+      }
+
+      .HayFeverColdComparison td {
+        padding-left: 50%;
+        position: relative;
+      }
+
+      .HayFeverColdComparison td::before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      .HayFeverColdComparison td:nth-child(1)::before { content: "Symptom"; }
+      .HayFeverColdComparison td:nth-child(2)::before { content: "Hay Fever"; }
+      .HayFeverColdComparison td:nth-child(3)::before { content: "Cold"; }
+    }
+
+/* Diarrhea */
+
+
+      @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+   
+
+    .Diarrhea .card {
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: #fff;
+      color: #111;
+      padding: 40px 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    .Diarrhea .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .Diarrhea h2 {
+      font-size: 1.8rem;
+      color: #ef5b46;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .Diarrhea h3 {
+      margin-top: 40px;
+      font-size: 1.5rem;
+      color: #ef5b46;
+      /* border-bottom: 2px solid #ef5b46; */
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .Diarrhea p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .Diarrhea ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .Diarrhea li {
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+
+    .Diarrhea table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.95rem;
+    }
+
+    .Diarrhea th,.Diarrhea td {
+      border: 1px solid #ccc;
+      padding: 14px 12px;
+      text-align: left;
+      transition: background-color 0.3s ease;
+    }
+
+    .Diarrhea tr:hover td {
+      background-color: #f8f8f8;
+    }
+
+    .Diarrhea th {
+      background-color: #0b1d3a;
+      color: #fff;
+    }
+
+    .Diarrhea .highlight {
+      color: #ef5b46;
+      font-weight: bold;
+    }
+
+    .Diarrhea .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .Diarrhea .badge:hover {
+      transform: scale(1.1);
+    }
+
+    .Diarrhea .badge.no {
+      background-color: #d0312d;
+    }
+
+    .Diarrhea .badge.yes {
+      background-color: #219653;
+    }
+
+    .Diarrhea .badge.maybe {
+      background-color: #f2c94c;
+      color: #000;
+    }
+
+    .Diarrhea .section-title {
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #ef5b46;
+    }
+
+    .Diarrhea .tips,.Diarrhea .red-flags {
+      background: #f9fbfd;
+      border-left: 5px solid #ef5b46;
+      padding: 18px;
+      margin-bottom: 20px;
+      color: #333;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .Diarrhea .tips:hover,.Diarrhea .red-flags:hover {
+      background-color: #f0f4f8;
+    }
+
+   .Diarrhea .red-flag {
+      color: #b00020;
+    }
+
+    @media (max-width: 768px) {
+      .Diarrhea table,.Diarrhea thead,.Diarrhea tbody,.Diarrhea th,.Diarrhea td,.Diarrhea tr {
+        display: block;
+      }
+
+      .Diarrheathead {
+        display: none;
+      }
+
+      .Diarrhea tr {
+        margin-bottom: 15px;
+      }
+
+      .Diarrhea td {
+        padding-left: 50%;
+        position: relative;
+      }
+
+      .Diarrhea td::before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #ef5b46;
+      }
+
+     .Diarrhea td:nth-child(1)::before { content: "Feature"; }
+      .Diarrhea td:nth-child(2)::before { content: "Food Poisoning"; }
+      .Diarrhea td:nth-child(3)::before { content: "Viral Gastroenteritis"; }
+      .Diarrhea td:nth-child(4)::before { content: "Bacterial Infection"; }
+    }
+
+
+
+
+     .Vomiting-container {
+      margin: 0;
+      padding: 40px 0px;
+      font-family: 'Inter', sans-serif;
+      /* background-color: #0e1a34; */
+      color: #fff;
+    }
+
+    .Vomiting-container .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .Vomiting-container .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: floatIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .Vomiting-container .card:hover {
+      transform: scale(1.03) rotateY(4deg);
+      box-shadow: 0 20px 40px rgba(72, 255, 255, 0.2);
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .Vomiting-container .card h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      background: linear-gradient(to right, #EF5B46, #f9d423);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .Vomiting-container .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .Vomiting-container .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .Vomiting-container .card ul li {
+      padding-left: 24px;
+      margin-bottom: 10px;
+      position: relative;
+      font-size: 15px;
+    }
+
+    .Vomiting-container .card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #50e3c2;
+      font-size: 16px;
+    }
+
+    .Vomiting-container .alert {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #ff6f6f;
+      padding: 12px 16px;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .Vomiting-container .card:nth-child(1) { animation-delay: 0.2s; }
+    .Vomiting-container .card:nth-child(2) { animation-delay: 0.4s; }
+    .Vomiting-container .card:nth-child(3) { animation-delay: 0.6s; }
+    .Vomiting-container .card:nth-child(4) { animation-delay: 0.8s; }
+
+    @media (max-width: 768px) {
+      .Vomiting-container .card {
+        padding: 24px;
+      }
+      .Vomiting-container .card h2 {
+        font-size: 20px;
+      }
+    }
+
+
+    /* Infection-section */
+
+
+
+
+   
+
+    .Infection-section {
+      max-width: 1400px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      /* box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1); */
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .Infection-section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+    }
+
+    .Infection-section h1 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .Infection-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .Infection-section th,
+    .Infection-section td {
+      padding: 16px 20px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .Infection-section th {
+      background: rgba(255, 255, 255, 0.07);
+      font-weight: 600;
+      color: #80d8ff;
+    }
+
+    .Infection-section tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .Infection-section td {
+      color: #e0e0e0;
+      font-size: 15px;
+    }
+
+    .Infection-section .highlight {
+      color: #ffb74d;
+      font-weight: bold;
+    }
+
+    .Infection-section .treatment,
+    .Infection-section .red-flags {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.05);
+    }
+
+    .Infection-section .treatment p,
+    .Infection-section .red-flags p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .Infection-section .red-flags ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .Infection-section .red-flags li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .Infection-section .red-flags li::marker {
+      color: #ff6f6f;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .Infection-section th,
+      .Infection-section td {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+
+
+/* EarPainDiagnosis */
+
+ 
+.EarPainDiagnosis {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.EarPainDiagnosis h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.EarPainDiagnosis .subtitle {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.EarPainDiagnosis .comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.EarPainDiagnosis .card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.EarPainDiagnosis .card:hover {
+  transform: scale(1.03) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+}
+
+.EarPainDiagnosis .card h2 {
+  color: #80d8ff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.EarPainDiagnosis .card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+.EarPainDiagnosis .section-title {
+  font-size: 22px;
+  color: #ffd54f;
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+}
+
+.EarPainDiagnosis .treatment,
+.EarPainDiagnosis .red-flags {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 40px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.EarPainDiagnosis .treatment h2,
+.EarPainDiagnosis .red-flags h2 {
+  color: #EF5B46;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.EarPainDiagnosis .treatment p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.EarPainDiagnosis .highlight {
+  color: #EF5B46;
+  font-weight: bold;
+}
+
+.EarPainDiagnosis .red-flags ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.EarPainDiagnosis .red-flags li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .EarPainDiagnosis h1 {
+    font-size: 26px;
+  }
+
+  .EarPainDiagnosis .subtitle {
+    font-size: 14px;
+  }
+
+  .EarPainDiagnosis .section-title {
+    font-size: 18px;
+  }
+}
+
+
+/* AbdominalPain */
+
+
+
+.abdominal-main .abdominal-container {
+  max-width: 1400px;
+  margin: auto;
+  background: linear-gradient(to right top, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.abdominal-main .intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.abdominal-main .subtitle {
+  color: #f9c74f;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.abdominal-main .highlight {
+  color: #90e0ef;
+  font-weight: bold;
+}
+
+.abdominal-main h2,
+.abdominal-main h3,
+.abdominal-main h4 {
+  color: #f9c74f;
+}
+
+.abdominal-main ul {
+  padding-left: 1.2rem;
+}
+
+.abdominal-main .compare-section {
+  margin-top: 2.5rem;
+}
+
+.abdominal-main .table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.abdominal-main .comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.abdominal-main .comparison-table th,
+.abdominal-main .comparison-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.abdominal-main .comparison-table th {
+  background: linear-gradient(to right, #0096c7, #48cae4);
+  color: #000;
+  font-weight: bold;
+}
+
+.abdominal-main .comparison-table tr:hover td {
+  background-color: rgba(255,255,255,0.04);
+  transition: 0.3s ease;
+}
+
+.abdominal-main .lower-section {
+  margin-top: 3rem;
+}
+
+.abdominal-main .condition-group {
+  margin-top: 2rem;
+  background: rgba(255,255,255,0.03);
+  padding: 1.5rem;
+  border-left: 5px solid #f9c74f;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.abdominal-main .condition-group:hover {
+  transform: scale(1.01);
+  background: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  .abdominal-main .comparison-table th,
+  .abdominal-main .comparison-table td {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+
+
+/* footer */
+
+
+.footer-main {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  padding: 80px 0px;
+  color: #e4e8f3;
+ 
+  /* background-color: #0e1a34; */
+
+  margin-top: 100px;
+}
+.footer-detail-section{
+  max-width: 1400px;
+margin: 0 auto;
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 250px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff6b5e;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.footer-text,
+.footer-link {
+  color: #d0d8f3;
+  font-size: 14px;
+  line-height: 1.7;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  background-color: #1e2a49;
+  color: white;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #ff6b5e;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    text-align: left;
+    padding: 40px 20px;
+  }
+
+  .logo {
+    justify-content: flex-start;
+  }
 }

@@ -4,6 +4,11 @@ import Medications from "./Medications";
 import logo from "../public/logo.webp";
 import ThroatSection from "./ThroatSection";
 import ThroatSectionTwo from "./ThroatSectiontwo";
+import HayFeverColdComparison from "./HayFeverColdComparison";
+import RashComparison from "./RashComparison";
+import EarPainDiagnosis from "./EarPainDiagnosis";
+import AbdominalPain from "./AbdominalPain";
+import Footer from "./Footer";
 // import "./App.css";
 
 const App = () => {
@@ -233,7 +238,241 @@ const App = () => {
         </div>
       </div>
     </section>
+<div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
 
+      <div className="HayFeverColdComparison">
+       <div className="">
+    <h2 className="section-title">Cause</h2>
+    <ul>
+      <li><strong>Hay fever:</strong> Caused by an allergic reaction to pollen, dust, pet dander, or mold.</li>
+      <li><strong>Cold:</strong> Caused by a virus.</li>
+    </ul>
+
+    <h3 className="section-title">Common Symptoms Comparison</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Symptom</th>
+          <th>Hay Fever</th>
+          <th>Cold</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Runny/stuffy nose</td>
+          <td>Yes (clear, watery mucus)</td>
+          <td>Yes (thicker, colored mucus)</td>
+        </tr>
+        <tr>
+          <td>Sneezing</td>
+          <td>Frequent</td>
+          <td>Often, but less intense</td>
+        </tr>
+        <tr>
+          <td>Itchy eyes/nose/throat</td>
+          <td>Very common</td>
+          <td>Rare</td>
+        </tr>
+        <tr>
+          <td>Watery eyes</td>
+          <td>Common</td>
+          <td>Rare</td>
+        </tr>
+        <tr>
+          <td>Cough</td>
+          <td>Sometimes (postnasal drip)</td>
+          <td>Common</td>
+        </tr>
+        <tr>
+          <td>Sore throat</td>
+          <td>Sometimes (from irritation)</td>
+          <td>Common</td>
+        </tr>
+        <tr>
+          <td>Fever</td>
+          <td><strong>Never</strong></td>
+          <td><strong>Sometimes</strong></td>
+        </tr>
+        <tr>
+          <td>Body aches</td>
+          <td><strong>Never</strong></td>
+          <td><strong>Common</strong></td>
+        </tr>
+        <tr>
+          <td>Fatigue</td>
+          <td>Sometimes</td>
+          <td>Common</td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td>As long as they are exposed to an allergen</td>
+          <td>Usually 3–10 days</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 className="section-title">Treatment</h3>
+    <ul className="treatment-list">
+      <li>Cetirizine 10mg (generic for Zyrtec) or Allegra or Claritin</li>
+      <li>Nasal sprays: Azelastine (Astelin, Astepro), Cromolyn sodium (NasalCrom)</li>
+      <li>Steroid nasal sprays: (Flonase, Rhinocort, Nasonex, Nasacort)</li>
+      <li>Decongestants: Pseudoephedrine (Sudafed), Oxymetazoline (Afrin, limit to 3 days)</li>
+      <li>Eye Drops: Ketotifen (Zaditor) or Olopatadine (Pataday, Patanol)</li>
+    </ul>
+  </div>
+  </div>
+  <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+      <div className="Diarrhea">
+        <div class="card">
+    <h2>Diarrhea</h2>
+    <p>When you have <span class="highlight">diarrhea while traveling</span>, it can be tough to tell whether it's due to <span class="highlight">food poisoning</span>, a <span class="highlight">viral infection</span>, or a <span class="highlight">bacterial infection</span> that needs antibiotics. Here's a breakdown to help you differentiate:</p>
+
+    <h3>Key Differences</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Food Poisoning (Toxin-based)</th>
+          <th>Viral Gastroenteritis</th>
+          <th>Bacterial Infection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Onset</td><td>Sudden (1–6 hrs or 12–24 hrs)</td><td>Gradual (1–2 days after exposure)</td><td>Gradual or sudden (1–3 days after exposure)</td></tr>
+        <tr><td>Duration</td><td>Short (less than 24 hrs)</td><td>1–3 days</td><td>3 days if untreated</td></tr>
+        <tr><td>Fever</td><td>Rare</td><td>Low-grade</td><td>High (38.5°C / 101.3°F) often present</td></tr>
+        <tr><td>Vomiting</td><td>Prominent</td><td>Common</td><td>Sometimes</td></tr>
+        <tr><td>Abdominal cramps</td><td>Strong, sudden</td><td>Moderate</td><td>Often severe</td></tr>
+        <tr><td>Blood or mucus in stool</td><td>Uncommon</td><td>No</td><td><span class="highlight">Yes</span> (esp. Shigella, Campylobacter)</td></tr>
+        <tr><td>Volume of diarrhea</td><td>Large, watery</td><td>Large, watery</td><td>Frequent, smaller-volume, may be bloody</td></tr>
+        <tr><td>Dehydration risk</td><td>Moderate</td><td>Moderate</td><td>High if persistent</td></tr>
+        <tr><td>Need for antibiotics?</td>
+          <td><span class="badge no">❌ No</span></td>
+          <td><span class="badge no">❌ No</span></td>
+          <td><span class="badge maybe">🟡 Sometimes</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">Bacterial Infection Symptoms and Signs (Consider Antibiotics)</div>
+    <ul>
+      <li>Diarrhea lasting  3 days</li>
+      <li>Fever ≥ 38.5°C / 101.3°F</li>
+      <li>Blood or pus in the stool</li>
+      <li>Severe abdominal pain</li>
+      <li>Immunocompromised or high-risk medical history</li>
+    </ul>
+
+    <h3>Recovery Tips</h3>
+    <div class="tips">
+      <ul>
+        <li>Stay hydrated with <strong>oral rehydration salts (ORS)</strong> or electrolyte drinks.</li>
+        <li>If no blood or fever is present:</li>
+        <li><strong>Loperamide (Imodium)</strong> 4 mg every 6 hours as needed. <em>(Not more than 2 days)</em></li>
+        <li><strong>Bismuth subsalicylate</strong> (Pepto-Bismol) 2–4 capsules every hour as needed. <em>(Max 8 in 24 hrs)</em></li>
+      </ul>
+    </div>
+
+    <h3>Associated with Nausea & Vomiting</h3>
+    <div class="tips">
+      <ul>
+        <li><strong>Clear fluids:</strong> Water, electrolyte tablets, ORS</li>
+        <li><strong>Avoid:</strong> Sugary, caffeinated, or dairy-based drinks</li>
+        <li><strong>Start slow:</strong> Sip small amounts every 10–15 min</li>
+        <li>Use <strong>BRAT diet</strong>: Bananas, rice, applesauce, toast</li>
+        <li>Ginger candy or tea may help</li>
+        <li>Consider <strong>Ondansetron 8mg</strong> dissolvable under tongue every 8 hrs as needed</li>
+      </ul>
+    </div>
+
+    <h3>Red Flags</h3>
+    <div class="red-flags">
+      <ul>
+        <li class="red-flag">Vomiting persists  24 hrs</li>
+        <li class="red-flag">No urination for 12 hrs</li>
+        <li class="red-flag">Blood in vomit</li>
+        <li class="red-flag">Fever 101°F (38.3°C)</li>
+        <li class="red-flag">Suspected <strong>pregnancy</strong> or severe abdominal pain</li>
+      </ul>
+    </div>
+  </div>
+      </div>
+       <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+      <div className="Vomiting-container">
+         <div className="grid-container">
+
+    <div className="card">
+      <h2>What Causes Nausea?</h2>
+      <p>Nausea is a common symptom triggered by various conditions. It's important to identify the root cause to treat it effectively.</p>
+      <ul>
+        <li>Food poisoning, viral infection</li>
+        <li>Motion sickness, migraine</li>
+        <li>Pregnancy (morning sickness)</li>
+        <li>Heat stroke or dehydration</li>
+      </ul>
+    </div>
+
+    <div className="card">
+      <h2>Hydration & Nutrition</h2>
+      <p>Keeping the body hydrated is the most important step during episodes of vomiting and nausea.</p>
+      <ul>
+        <li>Sip ORS, coconut water, or lime water</li>
+        <li>Avoid soda, coffee, or milk</li>
+        <li>Eat soft foods – khichdi, toast, bananas</li>
+        <li>Start with small amounts frequently</li>
+      </ul>
+    </div>
+
+    <div className="card">
+      <h2>Home Remedies</h2>
+      <p>Simple home-based solutions can ease symptoms before medication is needed.</p>
+      <ul>
+        <li>Chew ginger or sip ginger tea</li>
+        <li>Lemon and honey in warm water</li>
+        <li>Deep breathing in fresh air</li>
+        <li>Cold compress on the neck</li>
+      </ul>
+    </div>
+
+    <div className="card">
+      <h2>Medications & Alerts</h2>
+      <ul>
+        <li>Ondansetron 4–8mg (dissolvable)</li>
+        <li>Meclizine (for motion sickness)</li>
+        <li>Domperidone (consult doctor)</li>
+      </ul>
+      <div className="alert">⚠️ Avoid Ondansetron in first trimester of pregnancy.</div>
+      <div className="alert">⚠️ Always consult a doctor for correct dosage.</div>
+    </div>
+
+  </div>
+
+      </div>
+       <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+      <div className="">
+        <RashComparison/>
+      </div>
+        <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+      <div className="">
+        <EarPainDiagnosis/>
+      </div>
+         <div className="ThroatSectionTwo-main">
+        <ThroatSectionTwo/>
+      </div>
+      <div className="">
+        <AbdominalPain/>
+      </div>
+      {/* <Footer/> */}
     </div>
   );
 };
