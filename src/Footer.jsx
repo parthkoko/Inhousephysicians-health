@@ -1,4 +1,6 @@
 import React from "react";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import footerlogo from "../src/images/footerlogo.webp";
 // import "./Footer.css";
 
 const Footer = () => {
@@ -9,12 +11,12 @@ const Footer = () => {
       <div className="footer-section">
         <div className="logo">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/IHP_logo.png/600px-IHP_logo.png"
+            src={footerlogo}
             alt="IHP Logo"
           />
-          <div className="logo-text">IHP</div>
+          {/* <div className="logo-text">IHP</div> */}
         </div>
-        <p className="footer-text">InHouse Physicians</p>
+        {/* <p className="footer-text">InHouse Physicians</p> */}
       </div>
 
       {/* InHouse Info */}
@@ -36,10 +38,14 @@ const Footer = () => {
       {/* Social Icons */}
       <div className="footer-section">
         <div className="footer-title">Social</div>
-        <div className="social-icons">
-          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
-        </div>
+         <div className="social-icons">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaLinkedinIn />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaInstagram />
+      </a>
+    </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,270 @@
+@media only screen and (max-width: 1799px) {
+}
+@media only screen and (max-width: 1699px) {
+}
+@media only screen and (max-width: 1679px) {
+}
+@media only screen and (max-width: 1599px) {
+}
+@media only screen and (max-width: 1535px) {
+}
+@media only screen and (max-width: 1499px) {
+
+    :root {
+    --maxwidth: 1240px;
+}
+.image-container {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+.text-container {
+    flex: 1;
+    max-width: 500px;
+}
+}
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1399px) {
+}
+@media only screen and (max-width: 1365px) {
+}
+@media only screen and (max-width: 1299px) {
+       :root {
+    --maxwidth: 1140px;
+}
+.image-container {
+    flex: 1;
+    max-width: 580px;
+    position: relative;
+}
+.text-container {
+    flex: 1;
+    max-width: 480px;
+}
+.throat-text h2 {
+    font-size: 2.3rem;
+}
+}
+@media only screen and (max-width: 1279px) {
+}
+@media only screen and (max-width: 1199px) {
+          :root {
+    --maxwidth: 90%;
+}
+.throat-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px
+}
+.throat-text h2,
+.throat-two.throat-text h2{
+    margin-right: 0px;
+    margin-bottom: -60px;
+        padding: 50px 50px 70px 50px;
+}
+.throat-image img {
+    max-width: 550px;
+}
+.box-section-inn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+}
+@media only screen and (max-width: 1023px) {
+    .image-container {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+}
+.text-container {
+    flex: 1;
+    max-width: 400px;
+}
+.hero {
+    display: flex;
+    gap: 40px;
+    padding: 50px 40px 40px;
+}
+.medications-main {
+    padding: 60px 0px;
+}
+.throat-section {
+    padding: 60px 20px;
+    display: flex
+;
+    justify-content: center;
+}
+.footer-main {
+    padding: 60px 0px;
+    margin-top: 60px;
+}
+.text-container h1 {
+    font-size: 1.9rem;
+}
+    .throat-text h2, .throat-two.throat-text h2 {
+        padding: 40px 50px 70px 50px;
+    }
+        .throat-text h2, .throat-two.throat-text h2 {
+        font-size: 2rem;
+    }
+    .abdominal-main .intro-section h1 {
+    font-size: 2rem;
+}
+    .throat-symptom-checker {
+    padding: 50px 0 60px 0;
+}
+.secmain {
+    padding: 50px 0;
+    position: relative;
+}
+.Diarrhea {
+    padding: 30px 0px;
+}
+}
+@media only screen and (max-width: 991px) {
+        .throat-image img {
+        max-width: 360px;
+    }
+        .throat-text h2, .throat-two.throat-text h2 {
+        padding: 40px 50px 50px 50px;
+        margin-bottom: -40px;
+    }
+        .hero {
+        display: flex
+;
+        gap: 60px;
+        padding: 50px 40px 40px;
+        flex-direction: column-reverse;
+    }
+        .text-container {
+        flex: 1;
+        max-width: 90%;
+    }
+        .image-container {
+        flex: 1;
+        width: 70% !important;
+        max-width: 100%;
+        /* position: relative; */
+    }
+    .main-header {
+    padding: 30px 20px;
+}
+.nav-links{
+grid-gap: 0;
+}
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 767px) {
+    .image-container::before {
+    bottom: -17px;
+    right: -17px;
+    width: 120px;
+    height: 120px;
+    background: #EF5B46;
+    border-radius: 15px;
+}
+.throat-container {
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+    .container {
+        gap: 30px;
+        display: flex
+;
+        flex-direction: column;
+    }
+        .box-section-inn {
+        display: grid
+;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+        .throat-section {
+        padding: 50px 0px;
+    }
+    .throat-text h2, .throat-two.throat-text h2 {
+        padding: 20px 20px 50px 20px;
+        margin-bottom: -40px;
+    }
+    .subtitle {
+    margin-bottom: 30px;
+}
+}
+@media only screen and (max-width: 575px) {
+    .secmain {
+        padding: 20px 0;
+        position: relative;
+    }
+    .HayFeverColdComparison {
+    /* margin: 0; */
+    padding: 40px 0px 0px 0px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+    .Vomiting-container .card h2 {
+        font-size: 28px;
+    }
+    .Vomiting-container .grid-container {
+    grid-template-columns: 1fr;
+}
+.abdominal-main .abdominal-container {
+    padding: 1.5rem;
+}
+    .image-container {
+        flex: 1;
+        width: 90% !important;
+        max-width: 100%;
+        /* position: relative; */
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+        .throat-image img {
+        max-width: 250px;
+    }
+        .Diarrhea td {
+        padding-left: 58%;
+        position: relative;
+    }
+    .Infection-section {
+    padding: 18px;
+}
+}
+@media only screen and (max-width: 389px) {
+        .image-container::before {
+        bottom: -14px;
+        right: -14px;
+        width: 100px;
+        height: 100px;
+        background: #EF5B46;
+        border-radius: 15px;
+    }
+        .hero {
+        display: flex
+;
+        gap: 60px;
+        padding: 12px;
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 374px) {
+    .Infection-section th, .Infection-section td {
+        font-size: 12px;
+        padding: 7px;
+    }
+        .abdominal-main .abdominal-container {
+        padding: 1rem;
+    }
+        .Diarrhea td::before {
+        position: absolute;
+        left: 6px;
+        white-space: break-spaces;
+    }
+    .Diarrhea .card{
+        padding: 10px;
+    }
+}
+

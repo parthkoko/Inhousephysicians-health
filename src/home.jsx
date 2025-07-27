@@ -4,11 +4,18 @@ import Medications from "./Medications";
 import logo from "../public/logo.webp";
 import ThroatSection from "./ThroatSection";
 import ThroatSectionTwo from "./ThroatSectiontwo";
+import ThroatSectionthree from "./ThroatSectionthree";
+import ThroatSectionfour from "./ThroatSectionfour";
 import HayFeverColdComparison from "./HayFeverColdComparison";
 import RashComparison from "./RashComparison";
 import EarPainDiagnosis from "./EarPainDiagnosis";
 import AbdominalPain from "./AbdominalPain";
 import Footer from "./Footer";
+import ThroatSectionfive from "./ThroatSectionfive";
+import ThroatSectionsix from "./ThroatSectionsix";
+import ThroatSectionseven from "./ThroatSectionseven";
+import ThroatSectioneight from "./ThroatSectioneight";
+import Header from "./header";
 // import "./App.css";
 
 const App = () => {
@@ -65,7 +72,7 @@ const App = () => {
   return (
     <div>
       <canvas id="bg"></canvas>
-      <header>
+      {/* <header>
         <div className="logo">
           <img src={logo} alt="IHP Logo" />
         </div>
@@ -76,7 +83,10 @@ const App = () => {
           <a href="#">Resources</a>
         </nav>
         <a className="contact-button" href="#">Contact us</a>
-      </header>
+      </header> */}
+      <div className="main-header">
+        <Header/>
+      </div>
 
       <section className="hero">
         <div className="text-container">
@@ -239,7 +249,7 @@ const App = () => {
       </div>
     </section>
 <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectionthree/>
       </div>
 
       <div className="HayFeverColdComparison">
@@ -324,7 +334,7 @@ const App = () => {
   </div>
   </div>
   <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectionfour/>
       </div>
       <div className="Diarrhea">
         <div class="card">
@@ -402,7 +412,7 @@ const App = () => {
   </div>
       </div>
        <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectionfive/>
       </div>
       <div className="Vomiting-container">
          <div className="grid-container">
@@ -455,24 +465,24 @@ const App = () => {
 
       </div>
        <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectionsix/>
       </div>
       <div className="">
         <RashComparison/>
       </div>
         <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectionseven/>
       </div>
       <div className="">
         <EarPainDiagnosis/>
       </div>
          <div className="ThroatSectionTwo-main">
-        <ThroatSectionTwo/>
+        <ThroatSectioneight/>
       </div>
       <div className="">
         <AbdominalPain/>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };

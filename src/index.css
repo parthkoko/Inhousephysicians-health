@@ -6,6 +6,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+
+:root {
+  --maxwidth: 1400px;
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,37 +32,50 @@ canvas#bg {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
+.main-header{
+ background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  padding: 20px 60px;
+  padding: 30px 60px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 10;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+}
+
 
 .logo img {
-  height: 40px;
+  height: 50px;
 }
 
-nav a {
-  margin: 0 15px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap:40px;
+}
+
+.nav-links a {
   font-weight: 500;
   position: relative;
+  color: white;
+  text-decoration: none;
 }
 
-nav a::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -67,7 +86,7 @@ nav a::after {
   transition: 0.3s ease;
 }
 
-nav a:hover::after {
+.nav-links a:hover::after {
   width: 100%;
 }
 
@@ -84,6 +103,50 @@ nav a:hover::after {
   transform: translateY(-2px);
   background: #c74335;
 }
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 30px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .contact-button {
+    margin-top: 10px;
+  }
+}
+
 
 .hero {
   display: flex;
@@ -192,13 +255,15 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
    /* background-color: #0e1a34; */
-  max-width: 1400px;
+  max-width: var(--maxwidth);
   padding: 40px 70px;
   border-radius: 20px;
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .throat-text {
@@ -334,12 +399,12 @@ nav a:hover::after {
 
 /* Responsive Styles */
 @media(max-width: 768px) {
-  header {
+  .throat-section header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  nav {
+  .throat-section nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -379,7 +444,7 @@ nav a:hover::after {
     }
 
     .container {
-      max-width: 1400px;
+      max-width: var(--maxwidth);
       margin: 0 auto;
       /* display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
@@ -406,6 +471,7 @@ nav a:hover::after {
       opacity: 0;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
+      height: fit-content;
     }
     .card1 {
   grid-column: 1;
@@ -420,6 +486,7 @@ nav a:hover::after {
 .card3 {
   grid-column: 2;
   grid-row: 1 / 3;
+  
 }
 
     .card:nth-child(2) { animation-delay: 0.2s; }
@@ -725,7 +792,7 @@ nav a:hover::after {
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
       width: 90%;
-      max-width: 1400px;
+      max-width: var(--maxwidth);
       padding: 30px;
       gap: 30px;
       margin: 0 auto;
@@ -820,7 +887,7 @@ nav a:hover::after {
 }
 .box-section {
     width: 100%;
-    max-width: 1400px;
+    max-width: var(--maxwidth);
     margin: 0 auto;
 }
 .box-section-inn {
@@ -869,7 +936,7 @@ transition: 0.4s ease-in-out;
 }
 @media (max-width: 1299px) {
     .box-section {
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 }
 @media (max-width: 992px) {
@@ -918,7 +985,7 @@ transition: 0.4s ease-in-out;
     }
 
     .HayFeverColdComparison {
-      max-width: 1300px;
+      max-width: var(--maxwidth);
       margin: 0 auto;
     }
 
@@ -1010,7 +1077,7 @@ transition: 0.4s ease-in-out;
    
 
     .Diarrhea .card {
-      max-width: 1400px;
+      max-width: var(--maxwidth);
       margin: 0 auto;
       background-color: #fff;
       color: #111;
@@ -1186,7 +1253,7 @@ transition: 0.4s ease-in-out;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
       gap: 30px;
-      max-width: 1400px;
+      max-width: var(--maxwidth);
       margin: 0 auto;
     }
 
@@ -1286,7 +1353,7 @@ transition: 0.4s ease-in-out;
    
 
     .Infection-section {
-      max-width: 1400px;
+      max-width: var(--maxwidth);
       margin: auto;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 20px;
@@ -1401,7 +1468,7 @@ transition: 0.4s ease-in-out;
 
  
 .EarPainDiagnosis {
-  max-width: 1400px;
+  max-width: var(--maxwidth);
   margin: auto;
 }
 
@@ -1514,7 +1581,7 @@ transition: 0.4s ease-in-out;
 
 
 .abdominal-main .abdominal-container {
-  max-width: 1400px;
+  max-width: var(--maxwidth);
   margin: auto;
   background: linear-gradient(to right top, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   padding: 2rem;
@@ -1627,7 +1694,7 @@ transition: 0.4s ease-in-out;
   margin-top: 100px;
 }
 .footer-detail-section{
-  max-width: 1400px;
+  max-width: var(--maxwidth);
 margin: 0 auto;
  display: flex;
   flex-wrap: wrap;
@@ -1646,8 +1713,9 @@ margin: 0 auto;
   gap: 12px;
 }
 
-.logo img {
-  height: 50px;
+.footer-detail-section .logo img {
+  width: 180px;
+  height: 120px;
 }
 
 .logo-text {
@@ -1712,4 +1780,26 @@ margin: 0 auto;
   .logo {
     justify-content: flex-start;
   }
+}
+
+
+ .ThroatSectionthree .throat-text h2 {
+    color: #0e1a34;
+    background: #ffffff;
+   
+}
+ .ThroatSectionfour .throat-text h2 {
+    color: #ffffff;
+    background: #EF5B46;
+   
+}
+ .ThroatSectionsix .throat-text h2 {
+    color: #0e1a34;
+    background: #EF5B46;
+   
+}
+ .ThroatSectionseven .throat-text h2 {
+    color: #0e1a34;
+    background: #ffffff;
+   
 }

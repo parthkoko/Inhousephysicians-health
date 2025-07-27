@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import picone from "../src/images/picone.jpg";
 // import "./ThroatSection.css";
 
 const ThroatSection = () => {
@@ -40,7 +41,7 @@ const ThroatSection = () => {
         </div>
         <div className="throat-image" data-aos="zoom-in-left">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDikDOqDAm4yjSc7xb09q_k52eo-da_qrFBQ&s"
+            src={picone}
             alt="Sore Throat Info"
           />
         </div>
