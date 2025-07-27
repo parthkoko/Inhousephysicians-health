@@ -1267,6 +1267,7 @@ transition: 0.4s ease-in-out;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       animation: floatIn 1s ease forwards;
       opacity: 0;
+      height: 100%;
     }
 
     .Vomiting-container .card:hover {
