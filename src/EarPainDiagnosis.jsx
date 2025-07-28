@@ -11,46 +11,211 @@ const EarPainDiagnosis = () => {
           red flags
         </p>
 
-        <div className="comparison-grid">
-          <div className="card">
-            <h2>Otitis Externa</h2>
-            <p><strong>Common Name:</strong> Swimmer's Ear</p>
-            <p><strong>Pain Location:</strong> Outer Ear Canal</p>
-            <p><strong>Trigger:</strong> Pain on tugging ear</p>
-            <p><strong>Hearing Loss:</strong> Mild</p>
-            <p><strong>Discharge:</strong> Yes, foul-smelling</p>
-            <p><strong>Fever:</strong> Rare</p>
-            <p><strong>Onset:</strong> After swimming or trauma</p>
-            <p><strong>Age Group:</strong> All ages</p>
-            <p><strong>Treatment:</strong> Ofloxacin ear drops</p>
-          </div>
+         <div class="container-earpaintable">
+        {/* <div class="header">
+            <h1>Ear Conditions Comparison</h1>
+            <p>Comprehensive guide to common ear infections and treatments</p>
+        </div> */}
 
-          <div className="card">
-            <h2>Otitis Media</h2>
-            <p><strong>Common Name:</strong> Middle Ear Infection</p>
-            <p><strong>Pain Location:</strong> Deep in Ear</p>
-            <p><strong>Trigger:</strong> No pain on tugging</p>
-            <p><strong>Hearing Loss:</strong> Very Common</p>
-            <p><strong>Discharge:</strong> Sometimes (if ruptured)</p>
-            <p><strong>Fever:</strong> Common in children</p>
-            <p><strong>Onset:</strong> Sudden after URI</p>
-            <p><strong>Age Group:</strong> Mostly children</p>
-            <p><strong>Treatment:</strong> <span className="highlight">Augmentin 875mg</span> x 7 days</p>
-          </div>
-
-          <div className="card">
-            <h2>Serous Otitis Media</h2>
-            <p><strong>Common Name:</strong> Fluid Behind Eardrum</p>
-            <p><strong>Pain Location:</strong> Minimal or No Pain</p>
-            <p><strong>Trigger:</strong> No trigger</p>
-            <p><strong>Hearing Loss:</strong> Very Common</p>
-            <p><strong>Discharge:</strong> No</p>
-            <p><strong>Fever:</strong> No</p>
-            <p><strong>Onset:</strong> Gradual after URI</p>
-            <p><strong>Age Group:</strong> Mostly children</p>
-            <p><strong>Treatment:</strong> Decongestants (Afrin, oral)</p>
-          </div>
+        {/*  Desktop Table View */}
+        <div class="desktop-table">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Pain & Location</th>
+                            <th>Hearing Loss</th>
+                            <th>Discharge</th>
+                            <th>Fever</th>
+                            <th>Onset</th>
+                            <th>Age Group</th>
+                            <th>Treatment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="condition-name">Otitis Externa</div>
+                                <div class="common-name">Swimmer's Ear</div>
+                            </td>
+                            <td>
+                                <span class="pain-indicator pain-high"></span>
+                                Outer ear canal<br/>
+                                <small>Pain on tugging ear</small>
+                            </td>
+                            <td>Mild</td>
+                            <td>Yes, foul-smelling</td>
+                            <td>Rare</td>
+                            <td>After swimming or trauma</td>
+                            <td>All ages</td>
+                            <td>Ofloxacin ear drops</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="condition-name">Otitis Media</div>
+                                <div class="common-name">Middle Ear Infection</div>
+                            </td>
+                            <td>
+                                <span class="pain-indicator pain-high"></span>
+                                Deep in ear<br/>
+                                <small>No pain on tugging</small>
+                            </td>
+                            <td>Very Common</td>
+                            <td>Sometimes (if ruptured)</td>
+                            <td>Common in children</td>
+                            <td>Sudden after URI</td>
+                            <td>Mostly children</td>
+                            <td><span class="highlight">Augmentin 875mg</span> x 7 days</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="condition-name">Serous Otitis Media</div>
+                                <div class="common-name">Fluid Behind Eardrum</div>
+                            </td>
+                            <td>
+                                <span class="pain-indicator pain-low"></span>
+                                Minimal or no pain<br/>
+                                <small>No trigger</small>
+                            </td>
+                            <td>Very Common</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Gradual after URI</td>
+                            <td>Mostly children</td>
+                            <td>Decongestants (Afrin, oral)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+        {/* Mobile Card View  */}
+        <div class="mobile-cards">
+            <div class="condition-card">
+                <div class="card-header">
+                    <h3>Otitis Externa</h3>
+                    <div class="common-name">Swimmer's Ear</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <div class="card-label">Pain Location:</div>
+                        <div class="card-value">Outer Ear Canal</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Trigger:</div>
+                        <div class="card-value">Pain on tugging ear</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Hearing Loss:</div>
+                        <div class="card-value">Mild</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Discharge:</div>
+                        <div class="card-value">Yes, foul-smelling</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Fever:</div>
+                        <div class="card-value">Rare</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Onset:</div>
+                        <div class="card-value">After swimming or trauma</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Age Group:</div>
+                        <div class="card-value">All ages</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Treatment:</div>
+                        <div class="card-value">Ofloxacin ear drops</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="condition-card">
+                <div class="card-header">
+                    <h3>Otitis Media</h3>
+                    <div class="common-name">Middle Ear Infection</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <div class="card-label">Pain Location:</div>
+                        <div class="card-value">Deep in Ear</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Trigger:</div>
+                        <div class="card-value">No pain on tugging</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Hearing Loss:</div>
+                        <div class="card-value">Very Common</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Discharge:</div>
+                        <div class="card-value">Sometimes (if ruptured)</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Fever:</div>
+                        <div class="card-value">Common in children</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Onset:</div>
+                        <div class="card-value">Sudden after URI</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Age Group:</div>
+                        <div class="card-value">Mostly children</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Treatment:</div>
+                        <div class="card-value"><span class="highlight">Augmentin 875mg</span> x 7 days</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="condition-card">
+                <div class="card-header">
+                    <h3>Serous Otitis Media</h3>
+                    <div class="common-name">Fluid Behind Eardrum</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <div class="card-label">Pain Location:</div>
+                        <div class="card-value">Minimal or No Pain</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Trigger:</div>
+                        <div class="card-value">No trigger</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Hearing Loss:</div>
+                        <div class="card-value">Very Common</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Discharge:</div>
+                        <div class="card-value">No</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Fever:</div>
+                        <div class="card-value">No</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Onset:</div>
+                        <div class="card-value">Gradual after URI</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Age Group:</div>
+                        <div class="card-value">Mostly children</div>
+                    </div>
+                    <div class="card-row">
+                        <div class="card-label">Treatment:</div>
+                        <div class="card-value">Decongestants (Afrin, oral)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div className="treatment">
           <h2>Treatment Summary</h2>

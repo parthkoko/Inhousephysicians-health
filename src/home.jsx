@@ -200,9 +200,10 @@ const App = () => {
           </div>
           <div className="cardone">
             <div className="cardoneinner">
-              <h2>Treatment </h2>
+              <h2 className="title-changes">Treatment </h2>
+              <h2>Viral Infection Upper Respiratory Infection? </h2>
             <ul>
-              <li>Viral Infection Upper Respiratory Infection?</li>
+              
               <li>Consider using:</li>
               <li>Guaifenesin (generic for Mucinex®) 400 mg by mouth every 4 hours as needed, not to exceed 2400 mg per day - this loosens up secretions </li>
               <li>Ibuprofen 600 mg every 6 hours AND/OR Acetaminophen 1000 mg every 6-8 hours as needed for pain or fever (do not exceed 3000 mg per day)</li>
