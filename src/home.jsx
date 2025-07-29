@@ -198,9 +198,12 @@ const App = () => {
             </ul>
             </div>
           </div>
+          </div>
+<h2 className="title-changes">Treatment </h2>
+<div className="box-section-inn">
           <div className="cardone">
             <div className="cardoneinner">
-              <h2 className="title-changes">Treatment </h2>
+              
               <h2>Viral Infection Upper Respiratory Infection? </h2>
             <ul>
               
@@ -232,6 +235,9 @@ const App = () => {
             </ul>
             </div>
           </div>
+          </div>
+          <h2 className="title-changes">Red Flags </h2>
+          <div className="box-section-inn">
           <div className="cardone">
             <div className="cardoneinner">
               <h2>Red Flags </h2>
