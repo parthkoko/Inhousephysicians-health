@@ -24,7 +24,7 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
-
+  
 canvas#bg {
   position: fixed;
   z-index: 0;
