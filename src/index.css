@@ -40,7 +40,7 @@ a {
   color: inherit;
 }
 .main-header{
- background: rgba(255, 255, 255, 0.05);
+ background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
   padding: 30px 60px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -1811,15 +1811,40 @@ margin: 0 auto;
     background: #ffffff;
    
 }
-.title-changes{
-  /* color: #ffffff !important; */
-  font-weight: 600 !important;
-  font-size: 1.5rem;
-  margin: 20px 0px;
+.title-changes {
+  font-size: 1.6rem;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  letter-spacing: 1.5px;
+  padding: 12px 24px 10px 24px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #EF5B46, #FF8F6A, #FFC371);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   /* border-bottom: 3px solid #EF5B46; */
-  width: fit-content;
-  
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
+
+.title-changes::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  width: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, #EF5B46, #FF8F6A, #FFC371);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+
 /* .cardone:hover h2 .title-changes{
 color: #ef5b46 !important;
 transition: 0.4s ease-in-out;
